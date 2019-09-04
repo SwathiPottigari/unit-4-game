@@ -13,12 +13,15 @@ var losses = 0;
 window.onload = function () {
     randomNumberDiv.text(randomNumber);
     userScoreDiv.text(userScore);
+    $("#wins").text("Wins :"+wins);
+    $("#loss").text("Losses :"+losses);
 };
 
 // This function is executed when Crystal1 is clicked
-$("button").click(function () {
+$("img").click(function () {
     var score = '';
-    switch ($(this).val()) {
+    console.log(this);
+    switch ($(this).attr('data-value')) {
         case "crystal1":
             score = crystal1;
             break;
@@ -63,8 +66,8 @@ function checkIfWon() {
 
 // This function resets the game
 function reset() {
-    $("#wins").text(wins);
-    $("#loss").text(losses);
+    $("#wins").text("Wins :"+wins);
+    $("#loss").text("Losses :"+losses);
     userScore = 0;
     randomNumber = Math.floor(Math.random() * 102) + 19;
     crystal1 = (Math.floor(Math.random() * 6) + 1) * 2;
