@@ -77,3 +77,11 @@ footer{
     width: 100%;
     margin-top: 20%;
 }
+
+@media  screen and (max-width:780px) {
+    #mainHeading
+    {
+        font-size: 5vh;
+    }
+}
+
