@@ -19,6 +19,9 @@ window.onload = function () {
     $("#wins").text("Wins :"+wins);
     $("#loss").text("Losses :"+losses);
 };
+// $(document).ready(function(){
+//     $('[data-toggle="tooltip"]').tooltip();   
+//   });
 
 // This function is executed when Crystal1 is clicked
 $("img").click(function () {
