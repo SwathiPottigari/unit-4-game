@@ -19,12 +19,15 @@ window.onload = function () {
     $("#wins").text("Wins :"+wins);
     $("#loss").text("Losses :"+losses);
 };
+// $(document).ready(function(){
+//     $('[data-toggle="tooltip"]').tooltip();   
+//   });
 
 // This function is executed when Crystal1 is clicked
 $("img").click(function () {
     var score = '';
     console.log(this);
-    switch ($(this).attr('data-value')) {
+    switch ($(this).data('value')) {
         case "crystal1":
             score = crystal1;
             break;
@@ -59,16 +62,16 @@ function checkIfWon() {
         reset();        
         return true;
     }
-    else if (userScore > randomNumber) {
+    if (userScore > randomNumber) {
         losses++;
         lostAudio.play();
         status='You lost!!';
         reset();
         return true;
     }
-    else {
+    
         return false;
-    }
+    
 };
 
 // This function resets the game
