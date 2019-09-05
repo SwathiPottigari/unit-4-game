@@ -19,11 +19,12 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="instructions">
-            <h3>Instructions :</h3>
-            <ul>
+        <div id="instructionWrapper">
+            <h3 id="instructions">Instructions :</h3>
+            <div>
+            <ul >
                 <li> You will be given a random number at the start of the game.</br></li>
-                <li> are four crystals below.By clicking on a crystal you will add a specific amount of points to your
+                <li> There are four crystals below.By clicking on a crystal you will add a specific amount of points to your
                     total score.</br></li>
                 <li>You win the game by matching your total score to random number,you lose the game if your total score
                     goes above the random number.</li>
@@ -31,14 +32,16 @@
                 <li>Each time when the game starts,the game will change the values of each crystal.</li>
             </ul>
         </div>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6" id="randomNumDiv">
                     <h5>Match the number to:</h5>
                     <div id="randomNumber">
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6" id="statusDiv">
+                    <div id="status"></div>
                     <div id="wins"></div>
                     <div id="loss"></div>
                 </div>
@@ -61,7 +64,7 @@
                     <!-- <button id="crystal4" value="crystal4">crystal4</button> -->
                 </div>
             </div>
-            <div class="row">
+            <div class="row scorecard">
                 <div class="col-md-12">
                     <p>Your score is</p>
                 </div>
@@ -71,6 +74,13 @@
             </div>
         </div>
     </div>
+    <audio id="lostAudio">
+            <source src="assets/images/Lost.mp3" type="audio/mpeg" >
+        </audio>
+        <audio id="wonAudio">
+                <source src="assets/images/Win.mp3" type="audio/mpeg" >
+            </audio>
+        <footer class="footer mt-auto py-3" style="text-align: center">Copyright@</footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>

@@ -8,6 +8,9 @@ var crystal3 = ((Math.floor(Math.random() * 6)) * 2) + 1;
 var crystal4 = ((Math.floor(Math.random() * 6)) * 2) + 1;
 var wins = 0;
 var losses = 0;
+var winAudio=document.getElementById("wonAudio");
+var lostAudio=document.getElementById("lostAudio");
+var status='';
 
 // This function loads when the page loads
 window.onload = function () {
@@ -51,11 +54,15 @@ function updateUserScore(score) {
 function checkIfWon() {
     if (userScore === randomNumber) {
         wins++;
-        reset();
+        winAudio.play();
+        status='You won!!';
+        reset();        
         return true;
     }
     else if (userScore > randomNumber) {
         losses++;
+        lostAudio.play();
+        status='You lost!!';
         reset();
         return true;
     }
@@ -66,6 +73,7 @@ function checkIfWon() {
 
 // This function resets the game
 function reset() {
+    $("#status").text(status);
     $("#wins").text("Wins :"+wins);
     $("#loss").text("Losses :"+losses);
     userScore = 0;
