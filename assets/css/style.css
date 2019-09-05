@@ -47,7 +47,7 @@ ul {
 .container{
     color: rgb(97, 16, 151);
 }
-#randomNumDiv{
+#randomNumDiv,.crystals{
     text-align: center;
 }
 #randomNumber{
@@ -57,6 +57,7 @@ ul {
 #statusDiv{
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 .scorecard{
     text-align: center;
